@@ -1,0 +1,35 @@
+/* VARIABLE HERE */
+
+$borderWidth: 1px;
+$borderColor: black;
+
+/* GENERAL SEETING HERE */
+%invert {
+    background-color: black;
+    color: white;
+}
+
+%transition {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+%button {
+    background-color: white;
+    padding: 7px 20px;
+    border-radius: 30px;
+    border: $borderWidth solid $borderColor;
+    cursor: pointer;
+}
+
+/* FONT SETTING HERE */
+%navButtons {
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+%navProjectTitle {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
