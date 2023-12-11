@@ -67,8 +67,11 @@ body {
 }
 
 .header {
+    z-index: 10;
+    position: relative;
     background-color: black;
     color: white;
+    border-bottom: $borderWidth solid $borderColor;
     .header__logo {
         img {
             width: 100%;
@@ -266,3 +269,77 @@ body {
 
 
 
+
+
+.welcome {
+    position: relative;
+    .grid-style-1 {
+        position: relative;
+        background-color: $borderColor;
+        gap: $borderWidth;
+        border-top: $borderWidth solid $borderColor;
+        border-bottom: $borderWidth solid $borderColor;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: 50vw;
+        .grid-style-1__column {
+            background-color: white;
+        }
+    }
+    .welcome__text {
+        z-index: 2;
+        position: absolute;
+        font-size: 10.5vw;
+        letter-spacing: -0.5vw;
+        top: 0%;
+        left: 2%;
+        display: flex;
+        align-items: center;
+        height: 50vw;
+        padding: 0 50px;
+    }
+    .KK-info__clients {
+        @extend %invert;
+        font-size: 50px;
+        font-weight: 900;
+        letter-spacing: -1px;
+        padding: 20px;
+        height: 600px;
+    }    
+
+}
+
+.info2 {
+    .grid {
+        z-index: 0;
+        position: fixed;
+        width: 100%;
+        background-color: $borderColor;
+        gap: $borderWidth;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: 100vh;
+        & div {
+            background-color: white;
+        }
+    }
+}
+
+.KK-info {
+    position: relative;
+    .KK-info__text {
+        font-size: 10.5vw;
+        letter-spacing: -0.5vw;
+        padding: 80px 20px 100px 20px;
+    }
+    .KK-info__clients {
+        @extend %invert;
+        font-size: 50px;
+        font-weight: 900;
+        letter-spacing: -1px;
+        padding: 20px;
+        height: 600px;
+    }
+}
